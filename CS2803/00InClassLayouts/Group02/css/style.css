@@ -1,0 +1,149 @@
+/*html {*/
+/*    overflow: hidden;*/
+/*}*/
+
+body {
+    background-color: #FDFFFC;
+    color: #011627;
+    overflow: auto;
+}
+
+img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*------------------- Navigation Bar -----------------------------------------*/
+.navBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 54px;
+    width: 100%;
+    background-color: #2EC4B6;
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+.title {
+    width: 50%;
+    margin-left: 10px;
+    margin-right: -10px;
+    float: left;
+    position: absolute;
+}
+
+.menu {
+    width: 50%;
+    float: right;
+}
+
+ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    display: inline;
+}
+
+li a:hover:not(.active) {
+    background-color: #F3FFBD;
+}
+
+.active {
+    background-color: #F3FFBD;
+}
+
+li a {
+    display: block;
+    color: #011627;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*------------------- Main Page, row 1 ---------------------------------------*/
+
+.page {
+    height: 100vh;
+    /*overflow: auto;*/
+}
+
+.row1 {
+    height: 100vh;
+}
+
+.pageDescription, .frontImg {
+    height: 100%;
+    margin: auto 0px;
+}
+
+.pageDescription {
+    width: 40%;
+    float: left;
+    margin-left: 100px;
+    margin-right: -100px;
+}
+
+.frontImg {
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+
+.inner {
+    padding: 300px 80px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.innerImg {
+    padding: 250px 0px;
+}
+
+/*------------------- Main Page, row 2 ---------------------------------------*/
+
+.row2 {
+    text-align: center;
+    background-color:  #FDFFFC;
+    height: 1250px;
+    width: 100%;
+}
+
+.column {
+    width: 28%;
+    margin: 15px;
+    padding: 10px;
+    display: inline;
+    float: left;
+}
+
+.column .img {
+    padding: 20px 0px;
+}
+
+
+/*------------------- Footer -------------------------------------------------*/
+
+
+.footer {
+    background-color: #2EC4B6;
+    height: auto;
+    width: 100%;
+    margin-left: -8px;
+    /*margin: 0px;*/
+    /*bottom: -1330px;*/
+    /*position: absolute;*/
+    clear: both;
+}
+
+
+.footer pre {
+    text-align: center;
+    /*margin-left: 10px;*/
+    font-family: 'Indie Flower', cursive;
+}
+
+

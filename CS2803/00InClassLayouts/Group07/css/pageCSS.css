@@ -1,0 +1,121 @@
+#body {
+    background-image: url("../img/car.jpg");
+    position: relative;
+    background-repeat:no-repeat;
+    background-size:100% 100vh;
+    background-color:black;
+}
+
+/*------------------ INTRODUCTION code at the top of the page ------------------------ */
+#intro {
+    width:75%;
+    float: right;
+
+}
+
+
+#intro h1 {
+    text-align:right;
+    text-shadow: 2px 2px #ff0000;
+    border-bottom:thin solid red;
+    font-size: 400%;
+    font-family: 'Poiret One', cursive;
+    color:white;
+    padding: 0;
+
+}
+
+#intro h2 {
+    padding: 0;
+    text-align: right;
+    width: 100%;
+    color: red;
+}
+
+#intro p {
+    padding: 0;
+    font-size: 127%;
+    font-family: 'Antic', sans-serif;
+    text-shadow: 2px 2px black;
+    text-align: right;
+    color: white;
+    border:1px solid gray;
+    border-radius: 7px;
+}
+
+/*------------------End of the INTRODUCTION CODE------------------------*/
+
+
+
+/*------------------ LINKS for menu ------------------------*/
+#links {
+    width:100%;
+    float:left;
+    position: absolute;
+    bottom: -700px;
+     background:rgba(61,1,6,0.5);
+    opacity.0.5;
+}
+
+
+#links h2 {
+    padding: 0;
+    text-align: right;
+    width: 100%;
+    color: red;
+}
+
+#links ul{
+    list-style-type:none;
+    padding: 0;
+    overflow: hidden;
+}
+
+#links li {
+    text-align:center;
+    display:inline;
+    padding: 0;
+
+}
+
+#links li a {
+    text-align:center;
+    padding-right: 100px;
+    display:inline;
+    color: white;
+    font-size: 257%;
+    font-family: 'Poiret One', cursive;
+    text-decoration:none;
+
+}
+
+#more {
+    float:right;
+    font-size:38%;
+    text-align: right;
+}
+
+#links li a:hover {
+   background:rgba(255,255,255,0.7);
+
+}
+
+
+/*------------------End of the LINKS CODE------------------------*/
+
+
+
+
+
+
+What else should we add
+
+
+i THINK we should have like
+a section that describes the type of person we are targetting like "If you like fast, agile blah blah cars" and then maybe the car a bit
+
+and then describe the features of the car a bit since its like advertising a toy in another section
+
+the two sections could just be two seperate DIVs vertically stacked hmmmm
+
+sounds gud

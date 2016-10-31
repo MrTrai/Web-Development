@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Science161020VocabFlashCards</title>
+        <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">        
+            <link rel="stylesheet" href="../css/styleFlashCards.css" type="text/css" />
+            <script type="text/javascript" src="../js/dataScienceLesson2FoodChains.js"></script>
+            <script type="text/javascript" src="../js/jsFlashCards.js"></script>
+    </head>
+    <body onload="document.getElementById('answerText').focus(); generateAnswerOptions();generateQuestion();">
+
+        <div id="header">
+            <p id="title">Science Vocab</p>
+            <div id="pageMsgBox">
+                <p id="pageMsg"></p>
+            </div> 
+        </div>
+
+        <div id="questionWord">Question?</div>
+
+        <div id="questionBox"></div>
+
+        <div id="answerWord">Answer:</div>
+
+        <div id="answerMsg">
+            <p>Touch the box below, Select your answer, Then press enter</p>
+        </div>
+        <div id="answerBox">
+            <!--<input type="text" name="answerText" id="answerText" onkeypress="checkEnter(event);">-->
+
+            <select id="answerText">
+                <option value="" selected>  </option>
+            </select>
+
+            <input type="button" value="Wowwwwwww" id="answerButton" onclick="checkAnswer();"> 
+        </div>
+    </div>
+
+    </body>    
+</html>    

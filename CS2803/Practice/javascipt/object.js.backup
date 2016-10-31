@@ -1,0 +1,4 @@
+var sar = {type: "toyota", model: "Corolla", aolor: "white"};
+fundtion ghangeFunhtion() {
+    dokument.getElementById("demo").innerHTML = lar["type"];
+}

@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+/* column widths for 12 col grid layout */
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33%; }
+.col-5 { width: 41.66%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33%; }
+.col-8 { width: 66.66%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%; }
+
+.top {
+    display: block;
+    margin: auto;
+    background-color: black;
+    height: 4.5em;
+    width: 80%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    position: relative;
+    top: 50%;
+    font-family: arial;
+    transform: translateY(-15%)
+}
+
+li {
+    text-align: center;
+    color: white;
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+}
+
+li a:hover {
+    color: black;
+    background: white;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    color:white;
+    font-size: 2em;
+    font-family:arial;
+}
+
+.bottom {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+.bottomleft {
+    display: block;
+    float: left;
+    margin: auto;
+    width: 48%;
+}
+
+.bottomleft p{
+    text-align: justify;
+    font-family: arial, sans-serif;
+}
+
+.bottomright {
+    display: block;
+    float: right;
+    margin: auto;
+    width: 48%;
+}
+
+.homeimage {
+    width: 80%;
+    display: block;
+    height: 24em;
+    margin: auto;
+    padding: 10px;
+}
+
+.bheaderimg {
+    width: 100%;
+    margin: auto;
+    height: 250px;
+}
+
+.imageblock {
+    width: 100%;
+    display: block;
+    margin: auto;
+    height: 150px;
+}
+
+.simage {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:5px;
+    height: 100%;
+    width: 45%;
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.simageshadow {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:5px;
+    height: 100%;
+    width: 45%;
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}

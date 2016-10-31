@@ -8,6 +8,8 @@ var questions = [
             {answer:"Donald Trump", question:"Who said to build a wall between the US and Mexico, and then demand Mexico to pay for it?"},
             {answer:"Hillary Clinton", question:"Which presidential candidate has their spouse to be president in the past?"}
             ];
+			
+var candidates = ["Barrack Obama", "Hillary Clinton", "Joe Biden", "Donald Trump"];
 
 
 //Array of Objects for pageMesgBox

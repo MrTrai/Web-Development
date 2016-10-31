@@ -2,9 +2,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css/project03.css" type="text/css"/>
-        <script type="text/javascript" src="../js/Project03.js"> </script>
+       
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
         <script type="text/javascript" src="../js/Questions.js"> </script>
         <title>New title wow</title>
@@ -15,7 +15,7 @@
             <div class="TopBar">
                 <p id="title">Presidential Election 101</p>
                 <div id="title">
-                    <p id = "score">Score: </p>
+                    <p id = "score"> </p>
                 </div>
             </div>
 
@@ -24,23 +24,12 @@
 
                     <div id="menu">
                         <p>
-                            Level 1
-                        </p>
-                    </div>
-
-                    <div id="menu">
-                        <p>
-                            Level 2
-                        </p>
-                    </div>
-
-                    <div id="menu">
-                        <p>
-                            Level 3
+                            Presidential Election Quiz
                         </p>
                     </div>
                 </div>
             </div>
+
 
             <div id="Content">
 
@@ -48,6 +37,18 @@
                 </div>
 
                 <div id="Answers">
+					
+					
+					<div id="error">
+						<img src="../img/error2.png" alt="" height ="1%" width = "1%"/>
+						<p> That is not a correct answer</p>
+					</div>
+					
+					<div id="success">
+						<img src="../img/green.png" alt="" height ="1%" width = "1%"/>
+						<p> That is a correct answer!</p>
+					</div>
+					
 
                     <div id="Hillary Clinton" class="inline"  onclick="checkAnswer('Hillary Clinton');">
                         <img src="Hillary_Clinton.jpg" alt="" height = "auto" width = "100%"/>
@@ -67,18 +68,19 @@
 
 
                 </div>
-
+				<div style="clear:both"></div>
+				
                 <div id="button">
-                    <a href="">
                         <img src="../img/Next_Button.png" alt="" width = "100" height = "auto" onclick = "generateQuestion(); "/>
-                    </a>
                     <!-- <input type="button" name="Next" value="Next Question?" id="Next" onclick="generateQuestion()"> -->
                 </div>
-
-
             </div>
+			
+			<div id="winner">
+				<h1>You have passed the quiz!</h1>
+			</div>
 
         </div>
-
+	 <script type="text/javascript" src="../js/Project03.js"> </script>
     </body>
 </html>

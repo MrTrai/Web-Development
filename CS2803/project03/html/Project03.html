@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/project03.css" type="text/css"/>
+        <script type="text/javascript" src="../js/Project03.js"> </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script type="text/javascript" src="../js/Questions.js"> </script>
+        <title>New title wow</title>
+    </head>
+    <body onload="generateQuestion();">
+        <div class="Container">
+
+            <div class="TopBar">
+                <p id="title">Presidential Election 101</p>
+                <div id="title">
+                    <p id = "score">Score: </p>
+                </div>
+            </div>
+
+            <div class="SideBar">
+                <div id="SideBar_Content">
+
+                    <div id="menu">
+                        <p>
+                            Level 1
+                        </p>
+                    </div>
+
+                    <div id="menu">
+                        <p>
+                            Level 2
+                        </p>
+                    </div>
+
+                    <div id="menu">
+                        <p>
+                            Level 3
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Content">
+
+                <div id = "Questions">
+                </div>
+
+                <div id="Answers">
+
+                    <div id="Hillary Clinton" class="inline"  onclick="checkAnswer('Hillary Clinton');">
+                        <img src="Hillary_Clinton.jpg" alt="" height = "auto" width = "100%"/>
+                    </div>
+
+                    <div id="Barrack Obama" class="inline"  onclick="checkAnswer('Barrack Obama');">
+                        <img src="../img/Obama.jpg" alt="" height = "auto" width = "100%"/>
+                    </div>
+
+                    <div id="Donald Trump" class="inline"  onclick="checkAnswer('Donald Trump');">
+                        <img src="../img/Donald_Trump.jpg" alt="" height = "auto" width = "100%"/>
+                    </div>
+
+                    <div id="Joe Biden" class="inline" onclick="checkAnswer('Joe Biden');">
+                        <img src="../img/Joe_Biden.jpeg" alt="" height = "auto" width = "100%"/>
+                    </div>
+
+
+                </div>
+
+                <div id="button">
+                    <a href="">
+                        <img src="../img/Next_Button.png" alt="" width = "100" height = "auto" onclick = "generateQuestion(); "/>
+                    </a>
+                    <!-- <input type="button" name="Next" value="Next Question?" id="Next" onclick="generateQuestion()"> -->
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

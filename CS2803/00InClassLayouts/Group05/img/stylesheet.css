@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+
+#logo {
+    font-size: 20px;
+    float: left;
+    padding: 1px 200px 1px 40px;
+}
+
+#mainPicture img{
+    width: 100%;
+}
+
+#navMenu {
+    min-width: 500px;
+    height: 50px;
+    background-color: yellow;
+}
+
+
+
+#navMenu ul {
+    height: 100%;
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+/*making Da In frustrated.. aaaaahhhh (<- Da In)
+why is it blue???!*/
+
+#navMenu li{
+    height: 100%;
+    list-style-type: none;
+    float: left;
+}
+
+#navMenu a {
+    height: 100%;
+    display: block;
+    padding: 15px 30px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
+#navMenu a:hover {
+    background-color: red;
+}
+
+
+
+#ageGroups div {
+    height: 800px;
+    width: 33%;
+    /*height:50%;*/
+    background-color: red;
+    float: left;
+    margin: 1px;
+}
+#ageGroups h1 {
+    text-align: center;
+    font-family: Calibri, 'sans-serif';
+    color: black;
+    font-size: 2vw;
+    background-color: yellow;
+    margin: 0;
+    padding: 10px;
+}

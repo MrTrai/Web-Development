@@ -1,0 +1,96 @@
+*{
+    padding:0;
+    border:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: arial, sans-serif;
+}
+
+/* Header Styles */
+#header, #logo, #menu{
+    overflow: hidden;
+}
+
+#header {
+        height: 6em;
+        width:80%;
+        margin: 10vh auto;
+        background-color: black;
+        color: white;
+        position: relative;
+}
+
+#logo {
+    height: 3em;
+    width: 40%;
+    float: left;
+    /*background: cyan;*/
+    position: absolute;
+    top: 50%;
+    transform:  translateY(-50%);
+}
+
+#logo p{
+    font-size: 3em;
+}
+
+#menu {
+    /*float: right;*/
+    width: 100%;
+    /*background: darkcyan;*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*top: 1.5em;*/
+    /*top: 4.5em;*/
+    /*transform: translateY(-100%);*/
+}
+
+#menu ul {
+
+}
+
+#menu li {
+    /*background: blue;*/
+    width: 23%;
+    float: left;
+    color: white;
+    text-align: center;
+    list-style-type: none;
+    margin-left: 2%;
+}
+
+/* unvisited link */
+#menu li a:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+#menu li a:visited {
+    color: white;
+}
+
+/* mouse over link */
+#menu li a:hover {
+    color: black;
+    background: white;
+}
+
+/* selected link */
+#menu li a:active {
+    color: #AAA;
+}
+
+/* Toy Divs */
+#toy1, #toy2, #toy3{
+    clear: both;
+    height: 500px;
+    border: solid 2px black;
+    width: 80%;
+    margin: 2.5% auto;
+
+}

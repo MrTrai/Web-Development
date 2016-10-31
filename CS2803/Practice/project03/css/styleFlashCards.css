@@ -1,0 +1,137 @@
+*{
+    padding:0;
+    border:0;
+    margin:0;
+}
+
+body{
+    box-sizing: border-box;
+    background: #004d00;
+    color: white;
+    font-family: 'Chewy', cursive;
+    font-size: 5vh;
+}
+
+/*================= HEADER =============*/
+#header{
+    height: 10vh;
+    background: black;
+    overflow: hidden;
+    transition-property: height;
+    transition-duration: 2s;
+}
+
+#title{
+    font-size: 8vh;
+    text-align: center;
+    text-shadow: 2px 2px yellow;    
+}
+
+#pageMsgBox{
+    height:50%;
+    width: 80%;
+    position: relative;
+    top:35vh;
+    left: 50%;    
+    transform: translateX(-50%) translateY(-50%);
+    background-size: auto 100%;
+    background-repeat: no-repeat; 
+    background-position: center;
+    visibility: hidden;
+}
+
+#pageMsg{
+    width: 100%;
+    position: relative;
+    font-size: 13vh;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-shadow: .25vh .25vh black ;
+}
+
+/*================= QUESTION =============*/
+#questionWord{
+    height:5vh;
+    color: yellow;
+    margin-left: 3vw;
+    font-size: 5vh;
+}
+
+#questionBox{
+    height:25vh;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 0vh;
+    font-size: 4vh;    
+}
+
+/*================= ANSWER =============*/
+#answerWord{
+    height:5vh;
+    color: yellow;
+    margin-left: 3vw;
+    font-size: 5vh;    
+}
+
+#answerMsg{
+    position: relative;
+    height: 10vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#answerMsg p{
+    color: #AAA;
+    font-size: 3.5vh;
+    text-align: center;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#answerBox{
+    height:15vh;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1vh;
+}
+
+#answerText{ /*input[type=text]*/
+    width: 100%;
+    text-align-last: center;
+    background: #004d00;
+    color: white;
+    font-family: 'Chewy', cursive;
+    font-size: 4vh;
+    border: .25vh solid white;
+}
+
+#answerText:focus{ /*input[type=text]:focus*/
+    border: .25vh solid white;
+    outline: none;    
+}
+
+
+#answerButton{ /*input[type=button]*/
+    display: block;
+    text-align: center;
+    background: #004d00;
+    color: yellow;
+    font-family: 'Chewy', cursive;
+    font-size: 6vh;
+    margin: .5vh auto 0;    
+}
+
+/*#answerButton:hover{ input[type=button]:hover
+     opacity: .5;
+     outline: none;
+}*/
+
+#answerButton:active{ /*input[type=button]:active*/
+     transform: translateY(.15vh);   
+}
+
+

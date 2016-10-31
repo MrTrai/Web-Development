@@ -1,0 +1,145 @@
+/*Header Style*/
+
+#header {
+        background-color: #333;
+        height: 7vh;
+        color: white;
+}
+
+#header #logo {
+    float: left;
+    font-family: 'Baloo Bhaina', cursive;
+    height: 5vh;
+    position: relative;
+    top: 1vh;
+    left: 1vh;
+}
+
+#header #logo h2 {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Pacifico', cursive;
+}
+
+#header #menu {
+    float: right;
+    height: 100%;
+    position: relative;
+    top: 2vh;
+}
+
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#header li {
+    display: inline;
+    padding: 15px;
+}
+
+#header li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#header li a:hover {
+    background-color: #111;
+}
+
+#header li a:active {
+    color: #FF0000;
+}
+
+/* END Header Style*/
+
+/* Feature Photo Style */
+
+#feature {
+    margin: 5vh auto;
+    width: 60%;
+    position: relative;
+}
+
+#featureImage {
+    width: 100%;
+    margin: 0px auto;
+}
+
+#featureText{
+    text-align: center;
+    width: 60%;
+    position: absolute;
+    bottom: -20px;
+    left: 20%;
+    background-color: white;
+    z-index: 5;
+}
+
+#featureText {
+    /*font-family: 'Baloo Bhaina', cursive;*/
+    font-family: 'Indie Flower', cursive;
+    font-size: 2em;
+    /*font-family: 'Pacifico', cursive;*/
+}
+
+#featureImage img {
+    width: 100%;
+    height: 100%;
+}
+
+/* END Feature Element style */
+
+/* Photo block style */
+
+#photos {
+    width: 60%;
+    margin: 0px auto;
+}
+
+#photos div {
+    width: 45%;
+}
+
+#photos div img {
+    width: 100%
+}
+
+#photos .left{
+    float: left;
+
+}
+
+#photos .right {
+    float: right;
+
+}
+
+/*End photo block */
+
+
+/*GLOBAL (Body)*/
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.image {
+    border: 4px rgba(15,15,15,.1) solid;
+    border-radius: 2px;
+    box-shadow: 0px 0px 20px #888888;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align:center;
+    clear: both;
+    bottom: none;
+}

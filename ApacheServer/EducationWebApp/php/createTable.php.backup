@@ -14,38 +14,14 @@ if (!$conn) {
 // sql to create table
 //Teacher table
 $sql = "CREATE TABLE Teachers (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-    firstname VARCHAR(30) NOT NULL,
-    lastname VARCHAR(30) NOT NULL,
-    password varchar(30) NOT NULL,
-    MathTotalQuestion INT(10) UNSIGNED,
-    ScienceTotalQuestion INT(10) UNSIGNED,
-    HistoryTotalQuestion INT(10) UNSIGNED,
-    EnglishTotalQuestion INT(10) UNSIGNED,
-    email VARCHAR(50),
+    Username VARCHAR(30) NOT NULL,
+    Email VARCHAR(30) NOT NULL,
+    Password varchar(30) NOT NULL,
     reg_date TIMESTAMP
 )";
 
-/* create table Student */
-/* ( */
-/* StudentID int, */
-/* FirstName varchar(255), */
-/* LastName varchar(255), */
-/* Email varchar(255), */
-/* Password varchar(255), */
-/* MathCorrect int, */
-/* MathTotalAnswered int, */
-/* ScienceCorrect int, */
-/* ScienceTotalAnswered int, */
-/* HistoryCorrect int, */
-/* HistoryTotalAnswered int, */
-/* EnglishCorrect int, */
-/* EnglishTotalAnswered int */
-/* ); */
-
 //Student table
 $sql1 = "CREATE TABLE Students (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     Username VARCHAR(30) NOT NULL,
     Email VARCHAR(30) NOT NULL,
     Password varchar(30) NOT NULL,
@@ -61,7 +37,7 @@ $sql1 = "CREATE TABLE Students (
 )";
 
 //Questions
-$sql2 = "CREATE TABLE Questions (
+$sql2 = "CREATE TABLE MathQuestions (
     Question varchar(255) NOT NULL,
     Answer1 varchar(255) NOT NULL,
     Answer2 varchar(255) NOT NULL,
@@ -70,6 +46,30 @@ $sql2 = "CREATE TABLE Questions (
     CorrectAnswer varchar(255) NOT NULL
 )";
 
+$sql3 = "CREATE TABLE ScienceQuestions (
+    Question varchar(255) NOT NULL,
+    Answer1 varchar(255) NOT NULL,
+    Answer2 varchar(255) NOT NULL,
+    Answer3 varchar(255) NOT NULL,
+    Answer4 varchar(255) NOT NULL,
+    CorrectAnswer varchar(255) NOT NULL
+)";
+$sql4 = "CREATE TABLE HistoryQuestions (
+    Question varchar(255) NOT NULL,
+    Answer1 varchar(255) NOT NULL,
+    Answer2 varchar(255) NOT NULL,
+    Answer3 varchar(255) NOT NULL,
+    Answer4 varchar(255) NOT NULL,
+    CorrectAnswer varchar(255) NOT NULL
+)";
+$sql5 = "CREATE TABLE EnglishQuestions (
+    Question varchar(255) NOT NULL,
+    Answer1 varchar(255) NOT NULL,
+    Answer2 varchar(255) NOT NULL,
+    Answer3 varchar(255) NOT NULL,
+    Answer4 varchar(255) NOT NULL,
+    CorrectAnswer varchar(255) NOT NULL
+)";
 if (mysqli_query($conn, $sql1)) {
     echo "Table Question created successfully";
 } else {

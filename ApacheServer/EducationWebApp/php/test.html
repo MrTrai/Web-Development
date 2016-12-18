@@ -111,6 +111,22 @@
                         document.getElementById("display").innerHTML=data;
                     });
                 });
+
+                $("#registerTeacher").click(function() {
+                    $.post("./Home/RegisterTeacher.php",
+                        {
+                            oldQuestion : document.getElementById('oldQuestion').value,
+                            question : document.getElementById('question').value,
+                            answer1 : document.getElementById('answer1').value,
+                            answer2 : document.getElementById('answer2').value,
+                            answer3 : document.getElementById('answer3').value,
+                            answer4 : document.getElementById('answer4').value,
+                            correct : document.getElementById('correct').value
+                        },
+                    function(data,status){
+                        document.getElementById("display").innerHTML=data;
+                    });
+                });
             });
         </script>
     </head>
@@ -156,11 +172,11 @@
     <br />
     <hr />
         <p>Teacher Registration</p>
-    Username:   <input type="text" name="answer3" value="" id="answer3">
+    Username:   <input type="text" name="username" value="" id="answer3">
     <br />
-    password:   <input type="text" name="answer4" value="" id="answer4">
+    password:   <input type="text" name="password" value="" id="answer4">
     <br />
-    email:   <input type="text" name="correct" value="" id="correct">
+    email:   <input type="text" name="email" value="" id="correct">
 
     <div id="display"></div>
 

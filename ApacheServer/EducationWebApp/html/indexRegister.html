@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>test</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../css/styleRegister.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#button_register").click(function() {
+                    $.post("../php/SubmitStudentData.php",
+                        {
+                            username: document.getElementById('username').value,
+                            password: document.getElementById('password').value,
+                            email: document.getElementById('email').value
+                        },
+                    function(data,status){
+                        document.getElementById("display").innerHTML=data;
+                    });
+                    $("#id1").fadeIn("slow");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#">QuickZ</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="./index.html">
+                                <span class="glyphicon glyphicon-home"></span> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-question-sign"></span> About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-envelope"></span> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid text-center">    
+            <div class="row content">
+                <div class="col-sm-12"> 
+                    <div id="login" style="border-radius:20px">
+                    <div id="id1" style="display:none"><div class="alert alert-success"> <strong>Registered Success!</strong></div></div>
+                        <span style="color: white;"> <h1>Register</h1> </span>
+                        <div class="formInput">
+                            <form action="" class="form-horizontal " id="index">
+                                <div class="form-group form-group-sm">
+                                    <div class="col-sm-1">
+                                        <label class="control-label" for="sm" style="color: white;">User: </label>
+                                    </div>
+                                    <div class="col-sm-1"> </div>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" name="username" type="text" id="username"/>
+                                    </div>
+                                    <div class="col-sm-4"> </div>
+                                </div>
+                                <div class="form-group form-group-sm">
+                                    <div class="col-sm-1">
+                                        <label class="control-label" for="sm" style="color: white;">Password: </label>
+                                    </div>
+                                    <div class="col-sm-1"> </div>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" name="password" type="password" id="password"/>
+                                    </div>
+                                    <div class="col-sm-4"> </div>
+                                </div>
+                                <div class="form-group form-group-sm">
+                                    <div class="col-sm-1">
+                                        <label class="control-label" for="sm" style="color: white;">Email: </label>
+                                    </div>
+                                    <div class="col-sm-1"> </div>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" name="email" type="text" id="email"/>
+                                    </div>
+                                    <div class="col-sm-4"> </div>
+                                </div>
+                                <div class="form-group form-group-sm">
+                                    <div class="col-sm-1">
+                                        <label class="control-label" for="sm" style="color: white;">Title: </label>
+                                    </div>
+                                    <div class="col-sm-1"> </div>
+                                    <div class="col-sm-6">
+                                        <form id="Title" action="">
+                                            <label class="radio-inline" style="color:white">
+                                                <input type="radio" name="optradio" value="teacher">Teacher
+                                            </label>
+                                            <label class="radio-inline" style="color:white">
+                                                <input type="radio" name="optradio" value="student">Student
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="col-sm-4"> </div>
+                                </div>
+                            </form>
+                            <hr style="margin-left:-25%"/>
+                            <button type="submit" id="button_register" class="btn btn-success btn-lg" style="opacity: 1; margin-top: 7%; margin-left:-20%">Register</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- name: <input class="form-control" name="username" type="text" id="username" /> -->
+    <!-- <br/> -->
+    <!-- password: <input class="form-control" name="password" type="password" id="password" /> -->
+    <!-- <br/> -->
+    <!-- email: <input class="form-control" name="email" type="text" id="email" /> -->
+    <!--     <br/> -->
+        <!-- <div id="display"></div> -->
+
+    </body>
+</html>
+

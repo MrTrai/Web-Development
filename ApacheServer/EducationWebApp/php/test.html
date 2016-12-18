@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>test</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#Get-Btn").click(function() {
+                    $.post("getJSON.php",
+                        {
+                            username: document.getElementById('username').value,
+                            password: document.getElementById('password').value,
+                            email: document.getElementById('email').value
+                        },
+                    function(data,status){
+                        var obj = JSON.parse(data);
+                        for (var i = 0, len = obj.length; i < len; i++) {
+                            var div = document.createElement('div');
+                            div.innerHTML = obj[i].firstname + obj[i].lastname + obj[i].email + "<br/>";
+                            document.getElementById("display").appendChild(div);
+                        }
+                    });
+                });
+
+                $("#Check-Btn").click(function() {
+                    $.post("login.php",
+                        {
+                            username: document.getElementById('username').value,
+                            password: document.getElementById('password').value,
+                            email: document.getElementById('email').value
+                        },
+                    function(data,status){
+                        document.getElementById("display").innerHTML=data;
+                    });
+                });
+
+                $("#Submit-Btn").click(function() {
+                    $.post("SubmitStudentData.php",
+                        {
+                            username: document.getElementById('username').value,
+                            password: document.getElementById('password').value,
+                            email: document.getElementById('email').value
+                        },
+                    function(data,status){
+                        document.getElementById("display").innerHTML=data;
+                    });
+                });
+
+                $("#Delete-Btn").click(function() {
+                    $.post("DeleteData.php",
+                        {
+                            username: document.getElementById('username').value,
+                            password: document.getElementById('password').value,
+                            email: document.getElementById('email').value
+                        },
+                    function(data,status){
+                        document.getElementById("display").innerHTML=data;
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+    name: <input class="form-control" name="username" type="text" id="username" />
+    <br/>
+    password: <input class="form-control" name="password" type="password" id="password" />
+    <br/>
+    email: <input class="form-control" name="email" type="text" id="email" />
+        <br/>
+        <button type="submit" id="Check-Btn">Check User Name & Password</button>
+        <button type="submit" id="Get-Btn">Get Data</button>
+        <!-- <button type="submit" id="Submit-Btn">Submit</button> -->
+        <button type="submit" id="Submit-Btn" class="btn btn-success btn-lg" style="opacity: 1; margin-top: 7%">Submit!</button>
+        <button type="submit" id="Delete-Btn">Delete Data</button>
+
+        <div id="display"></div>
+
+    </body>
+</html>
+

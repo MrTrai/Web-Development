@@ -1,0 +1,41 @@
+in myDB
+
+Table:
+create table Student
+(
+StudentID int,
+Username varchar(255),
+Email varchar(255),
+Password varchar(255),
+MathCorrect int,
+MathTotalAnswered int,
+ScienceCorrect int,
+ScienceTotalAnswered int,
+HistoryCorrect int,
+HistoryTotalAnswered int,
+EnglishCorrect int,
+EnglishTotalAnswered int
+);
+
+
+create table Teacher
+(
+TeacherID int,
+FirstName varchar(255),
+LastName varchar(255),
+Password varchar(255),
+MathTotalQuestion int,
+ScienceTotalQuestion int,
+HistoryTotalQuestion int,
+EnglishTotalQuestion int)
+);
+
+create table Questions
+(
+Question varchar(255),
+answer1 varchar(255),
+answer2 varchar(255),
+answer3 varchar(255),
+answer4 varchar(255),
+CorrectAnswer varchar(255)
+);

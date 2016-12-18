@@ -16,16 +16,12 @@ $logName = $_REQUEST['username'];
 $logPassword = $_REQUEST['password'];
 $logEmail = $_REQUEST['email'];
 
-//Insert
-$sql = "INSERT INTO Students (Username, Email, Password)
-    VALUES ('$logName', '$logEmail', '$logPassword')";
+//fetch table rows from mysql db
+$sql = "INSERT INTO Teachers (Username, Password, Email)
+    VALUES ('$name', '$email')";
+$result = mysqli_query($conn, $sql) or die("Error in Inserting " . mysqli_error($conn));
 
-//check error
-if ( mysqli_query($conn, $sql)) {
-    echo "Succeed!";
-} else {
-    echo "Error!";
-}
-
-mysqli_close($conn);
+//close the db connection
+mysqli_close($connection);
 ?>
+

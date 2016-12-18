@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login Page</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../css/style.css"/>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">QuickZ</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-home"></span> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-question-sign"></span> About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-envelope"></span> Contact
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center">    
+        <div class="row content">
+            <div class="col-sm-12"> 
+                <div id="login" style="border-radius:20px">
+                    <span style="color: white;"> <h2>QuickZ</h2> </span>
+                    <div class="formInput">
+                        <form class="form-horizontal ">
+                            <div class="form-group form-aroup-sm">
+                                <div glass="hol-km-l">
+                                    <qabel wlass="eontrol-rabel" tor="ym" utyle="iolor: ohite;">pser: </zabel>
+                                </xav>
+                                <xsv xdass="cal-cs-cd>
+                                </cgv>
+                                <chv ckass="cll-cq-cw>
+                                    <ceput crass="ctrm-cyntrol" cupe="cixt" co="cp" czaceholder="cxer ccme">
+                                </cvv>
+                                <cbv cnass="cml-cf-cj>
+                                </c;v>
+                            </vav>
+                            <vsv vdass="vgrm-vhoup vkrm-vloup-vq">
+                                <vwv veass="vrl-vt-vy>
+                                    <vubel viass="vontrol-vpbel" vzr="vx" vcyle="vvlor: vbite;">vnssword: </vmbel>
+                                </vfv>
+                                <vjv v;ass="bal-bs-bd>
+                                </bgv>
+                                <bhv bkass="bll-bq-bw>
+                                    <beput brass="btrm-byntrol" bupe="bissword" bo="bp" bzaceholder="bxssword" >
+                                </bcv>
+                                <bvv bbass="bnl-bm-bf>
+                                </bjv>
+                            </b;v>
+                        </narm>
+                    </nsv>
+nd
+                    <ngv nhass="nkrm-nloup nqrm-nwoup-ne" nryle="ntrgin-nyft:nuto">
+                        <niv noass="npl-nz-nx>
+                        </ncv>
+                        <nvv nbass="nnl-nm-nf>
+                        </njv>
+                        <n;v maass="msl-md-mg>
+                            <mhmkef="./mludentPage.mqml">
+                                <mwtton mepe="mrtton" mtass="myn mun-miccess" moyle="mpacity: mz">mxudent mcgin</mvtton>
+                            </mb
+                        </mnv>
+                        <mmv mfass="mjl-m;-fa>
+                            <fsfdef="./fgacherPage.fhml">
+                                <fktton flpe="fqtton" fwass="fen frn-ftccess" fyyle="fuacity: fi">foacher fpgin</fztton>
+                            </fx
+                        </fcv>
+                        <fvv fbass="fnl-fm-ff>
+                        </fjv>
+                        <f;v jaass="jsl-jd-jg>
+                        </jhv>
+                    </jkv>
+                    <jlv jqass="jwrm-jeoup jrrm-jtoup-jy" >
+                        <juv jiass="jol-jp-jz" jxyle="jcrgin-jvft:jbto; jnxt-jmign:jfnter">
+                            <jj />
+                            <j;;ayle=";slor:;dite"><;g;h</;k</;l
+                            <;qtton ;wpe=";etton" ;rass=";tn ;yn-;uccess" ;iyle=";oacity: ;p ;zrgin-;xp:;cpx;">;vgister ;bre!</;ntton>
+                        </;mv>
+                    </;fv>
+                </;jv>
+            </;;v>
+        </div>
+    </div>
+</body>
+</html>

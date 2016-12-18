@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url("../img/classroomBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Architects Daughter', cursive;
+    color: white;
+}
+
+#window{
+    width: 90vw;
+    height: 90vh;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: rgb(128,128,128);
+    opacity: .85;
+}
+
+.tile{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 20%;
+    height: 15%;
+    position: fixed;
+    border: solid 5px white;
+    border-radius: 3px;
+}
+
+.row1{ top: 10%;}
+.row2{ top: 25%;}
+.row3{ top: 40%;}
+.row4{ top: 55%;}
+.row5{ top: 70%;}
+
+.col1{ left: 10%;}
+.col2{ left: 30%;}
+.col3{ left: 50%;}
+.col4{ left: 70%;}
+
+/*#title{*/
+/*    left:70%;*/
+/*    background: white;*/
+/*}*/
+
+#teacher{
+    width:60%;
+    left: 10%;
+}
+
+
+.imgTile{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#teacherText{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 5.25vw;
+    font-family: 'Londrina Sketch', cursive;
+    text-shadow: 2px 2px yellow, 4px 4px red, 6px 6px red, 8px 8px red;
+}
+
+#titleText{
+    text-align: center;
+    font-size: 1.7vw;
+    transform-origin: 0% 0%;
+    transform: rotate(5deg);
+}
+
+*[id^='text']{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    top: 20%;
+    color: yellow;
+    text-align: center;
+    font-size: 1.65vw;
+    transform-origin: 0% 0%;
+    transform: rotate(5deg);
+    text-shadow: 2px 2px red;
+}
+
+#passwordBox{
+    display: inline-block;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 5;
+    width: 75vw;
+    height: 75vh;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-image: url("../img/vault2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*background: black;*/
+    color: white;
+    visibility: hidden;
+    border: outset 5px white;
+    border-radius: 3px;
+}
+
+#passwordBoxInfo, #passwordCheckReplyBox{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-size: 3em;
+    color: black;
+    text-shadow: 2px 2px white, 0px 0px 1px white;
+}
+
+#passwordCheckReplyBox{
+    visibility: hidden;
+    z-index: 10;
+    background-image: url("../img/redX.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 0px 0px 1px red, 0px 0px 2px yellow;
+}
+
+#passwordCheckReplyBox p{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 7.5vh;
+}
+
+#userpwd{
+    width: 100%;
+    height: 50%;
+    font-size: 2.5em;
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+    background: rgba(0,0,0,0);
+    color: black;
+    text-shadow: 0px 0px 25px white, 0px 0px 2px white;
+    outline: none;
+
+}
+
+#closeX{
+    position: absolute;
+    right: 0;
+    font-size: 1.5em;
+    color: black;
+    background: gray;
+}
+

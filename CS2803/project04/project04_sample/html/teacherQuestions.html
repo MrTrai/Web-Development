@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teacher Questions</title>
+        <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+    </head>
+
+    <body>
+        <form action="../php/teacherQuestionsDataEntry.php" method="post">
+            Grade Level: <input type="text" name="grade" size="2"><br><br>
+            Subject:
+                <input type="radio" name="subject" value="english"> English &nbsp; &nbsp; |
+                <input type="radio" name="subject" value="math"> Math &nbsp; &nbsp; |
+                <input type="radio" name="subject" value="science"> Science &nbsp; &nbsp; |
+                <input type="radio" name="subject" value="social"> Social Studies &nbsp; &nbsp; |
+                <input type="radio" name="subject" value="art"> Art
+                <br><br>
+            Question: <textarea name="question" rows="5" cols="30"></textarea><br><br>
+            Answer: <input type="text" name="answer" size="30"><br><br>
+            <input type="submit" value="Enter Question">
+        </form>
+
+    </body>
+</html>

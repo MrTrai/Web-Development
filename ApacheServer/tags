@@ -1,0 +1,67 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+app	EducationWebApp/controllers/loginCtrl.js	/^var app = angular.module('eduApp', ['ngRoute']);$/;"	v
+comment	testServer/welcome.php	/^        $comment = "";$/;"	v
+comment	testServer/welcome.php	/^        $comment = test_input($_POST["comment"]);$/;"	v
+conn	testServer/createTable.php	/^$conn = mysqli_connect($servername, $username, $password, $dbname);$/;"	v
+conn	testServer/insert.php	/^$conn = mysqli_connect($servername, $username, $password, $dbname);$/;"	v
+conn	testServer/show.php	/^$conn = mysqli_connect($servername, $username, $password, $dbname);$/;"	v
+data	testServer/welcome.php	/^    $data = htmlspecialchars($data);$/;"	v
+data	testServer/welcome.php	/^    $data = stripslashes($data);$/;"	v
+data	testServer/welcome.php	/^    $data = trim($data);$/;"	v
+db_database	testServer/connect.php	/^\/* $db_database = 'otherDB'; *\/$/;"	v
+db_database	testServer/login.php	/^$db_database = "myDB";$/;"	v
+db_hostname	testServer/login.php	/^$db_hostname = "localhost";$/;"	v
+db_password	testServer/login.php	/^$db_password = "123";$/;"	v
+db_server	testServer/connect.php	/^$db_server = mysqli_connect($db_hostname, $db_username, $db_password, $db_database);$/;"	v
+db_username	testServer/login.php	/^$db_username = "root";$/;"	v
+dbname	testServer/createTable.php	/^$dbname = "myDB";$/;"	v
+dbname	testServer/insert.php	/^$dbname = "myDB";$/;"	v
+dbname	testServer/show.php	/^$dbname = "myDB";$/;"	v
+email	testServer/connect.php	/^        $email = mysqli_real_escape_string($db_server, $_POST['email']);$/;"	v
+email	testServer/welcome.php	/^        $email = test_input($_POST["email"]);$/;"	v
+emailErr	testServer/welcome.php	/^        $emailErr = "Email is required";$/;"	v
+file	testServer/practice1_submit.php	/^                $file = fopen($fileName, "r") or die("Can't open file");$/;"	v
+fileName	testServer/practice1_submit.php	/^                $fileName = $_POST["file"];$/;"	v
+fileName	testServer/practice1_submit.php	/^            $fileName = "";$/;"	v
+firstname	testServer/connect.php	/^        $firstname = mysqli_real_escape_string($db_server, $_POST['firstname']);$/;"	v
+gender	testServer/welcome.php	/^        $gender = test_input($_POST["gender"]);$/;"	v
+genderErr	testServer/welcome.php	/^        $genderErr = "Gender is required";$/;"	v
+id	testServer/connect.php	/^    $id = mysqli_real_escape_string($db_server, $_POST['id']);$/;"	v
+last_id	testServer/insert.php	/^\/*     $last_id = mysqli_insert_id($conn); *\/$/;"	v
+lastname	testServer/connect.php	/^        $lastname = mysqli_real_escape_string($db_server, $_POST['lastname']);$/;"	v
+logEmail	testServer/insert.php	/^$logEmail = $_POST['email'];$/;"	v
+logName	testServer/insert.php	/^$logName = $_POST['username'];$/;"	v
+logPassword	testServer/insert.php	/^$logPassword = $_POST['password'];$/;"	v
+name	testServer/welcome.php	/^        $name = test_input($_POST["name"]);$/;"	v
+name	testServer/welcome.php	/^$name = $email = $gender = $comment = $website = "";$/;"	v
+nameErr	testServer/welcome.php	/^        $nameErr = "Name is required";$/;"	v
+nameErr	testServer/welcome.php	/^$nameErr = $emailErr = $genderErr = $websiteErr = "";$/;"	v
+password	testServer/createTable.php	/^$password = "123";$/;"	v
+password	testServer/insert.php	/^$password = "123";$/;"	v
+password	testServer/show.php	/^$password = "123";$/;"	v
+query	testServer/connect.php	/^        $query = "INSERT INTO MyGuests (firstname, lastname, email)$/;"	v
+query	testServer/connect.php	/^    $query = "DELETE FROM MyGuests WHERE id='$id'";$/;"	v
+query	testServer/connect.php	/^    $query = "TRUNCATE TABLE MyGuests";$/;"	v
+query	testServer/connect.php	/^$query = "SELECT * FROM MyGuests";$/;"	v
+result	testServer/connect.php	/^$result = mysqli_query($db_server, $query);$/;"	v
+result	testServer/show.php	/^$result = mysqli_query($con,"SELECT * FROM Persons");$/;"	v
+row	testServer/connect.php	/^    $row = mysqli_fetch_row($result);$/;"	v
+rows	testServer/connect.php	/^$rows = mysqli_num_rows($result);$/;"	v
+servername	testServer/createTable.php	/^$servername = "localhost";$/;"	v
+servername	testServer/insert.php	/^$servername = "localhost";$/;"	v
+servername	testServer/show.php	/^$servername = "localhost";$/;"	v
+sql	testServer/createTable.php	/^$sql = "CREATE TABLE MyGuests ($/;"	v
+sql	testServer/insert.php	/^$sql = "INSERT INTO MyGuests (firstname, lastname, email)$/;"	v
+submitLog	sendLog.js	/^function submitLog() {$/;"	f
+test_input	testServer/welcome.php	/^function test_input($data) {$/;"	f
+username	testServer/createTable.php	/^$username = "root";$/;"	v
+username	testServer/insert.php	/^$username = "root";$/;"	v
+username	testServer/show.php	/^$username = "root";$/;"	v
+website	testServer/welcome.php	/^        $website = "";$/;"	v
+website	testServer/welcome.php	/^        $website = test_input($_POST["website"]);$/;"	v
+xhttp.onreadystatechange	sendLog.js	/^    var xhttp = new XMLHttpRequest();$/;"	f

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="sendLog.js" type="text/javascript" charset="utf-8"> </script>
+    </head>
+    <body>
+            <pre>
+User Name:  <input type="text" id="username"/>
+Password:   <input type="text" id="password"/>
+Email:      <input type="text" id="email"/>
+            <button type="submit" onclick="submit()">Submit</button>
+            </pre>
+        <div id="display">
+            
+        </div>
+    </body>
+</html>

@@ -16,7 +16,6 @@ html, body {
 }
 
 .SideBar {
-    /* background-color: black; */
     border-right-style: double;
     border-width: 1px;
     height: 100%;
@@ -26,7 +25,6 @@ html, body {
 
 #SideBar_Content {
     margin-top: 73%;
-    /* margin-bottom: 50%; */
 }
 
 #menu {
@@ -45,22 +43,20 @@ html, body {
 }
 
 #Questions {
-    font-size: 200%;
+    font-size: 150%;
 }
 
 #Answers {
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 #button {
-    margin-top: 100px;
     margin-left: 50%;
     clear: left;
 }
 
 .inline {
     float: left;
-    /* border: 1px solid; */
     margin-left: 3%;
     width: 20%;
     display: block;
@@ -85,14 +81,12 @@ img:hover {
 
 #Content {
     float: left;
-    /* background-color: yellow; */
     margin-left: 15%;
     margin-top: 9%;
     width: 80%;
 }
 
 #div1 {
-    /* background-color: black; */
     height: 20vh;
     transition-property: height;
     transition-duration: 0.5s;
@@ -103,3 +97,61 @@ img:hover {
     height: 100%;
     width: 100%;
 }
+
+#success {
+	text-align:center;
+	vertical-align:middle; 
+	line-height:100px; 
+	display:none;
+}
+
+#success img {
+	display:inline-block;
+	margin:0; 
+	padding:0;
+}
+
+#success p {
+	display:inline-block;
+	margin:0;
+	padding:0;
+}
+
+
+#error {
+	text-align:center;
+	vertical-align:middle; 
+	line-height:100px; 
+	display:none;
+}
+
+#error img {
+	display:inline-block;
+	margin:0; 
+	padding:0;
+}
+
+#error p {
+	display:inline-block;
+	margin:0;
+	padding:0;
+}
+
+#winner {
+	 float: left;
+    margin-left: 15%;
+    margin-top: 9%;
+    width: 80%;
+	color: green;
+	display:none;
+	text-align: center;
+}
+
+#winner p {
+	text-align: center;
+}
+p {
+    font-weight: bold;
+    text-align: center;
+}
+

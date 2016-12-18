@@ -5,20 +5,17 @@ flag = 1;
 document.getElementById("score").innerText = "Score: " + score;
 
 function generateQuestion() {
-    if(flag) {
 		var questionsNum = questions.length;
 		var questionDiv = document.getElementById("Questions");
-		var index = Math.floor( Math.random() * questionsNum);
-		questionDiv.innerText = index;
+		var index = Math.floor( Math.random() * questions.length);
 		questionDiv.innerText = questions[index].question;
 		questionAnswer = questions[index].answer;
+        questions.splice(index, 1);
 		candidates.forEach(function(id) {
 			document.getElementById(id).style.display = "block";
 		});
 		document.getElementById("success").style.display = "none";
 		document.getElementById("error").style.display = "none";
-	}
-    // questions.splice( index, 1 );
 }
 
 function checkAnswer(i) {
@@ -48,7 +45,7 @@ function checkAnswer(i) {
 					document.getElementById("success").style.display = "none";
 					flag = 1;
 				}
-			},3000);	
+			},500);	
 		} else {
 			document.getElementById("error").style.display = "block";
 			document.getElementById("success").style.display = "none";

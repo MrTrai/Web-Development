@@ -1,0 +1,119 @@
+<?php
+require_once 'login.php';
+
+$db_server = mysqli_connect($db_hostname, $db_username, $db_password, $db_database);
+
+if (!$db_server) {
+    die("Unable to connect MYSQL" . mysqli_error());
+} else {
+    echo "Test!";
+}
+
+/* $db_database = 'otherDB'; */
+
+/* mysqli_select_db('otherDB', $db_server) */
+/*     or die( "<br/> fail to connect database!" . mysqli_error() ); */
+
+/* echo "<br> Success"; */
+
+$query = "SELECT * FROM MyGuests";
+$result = mysqli_query($db_server, $query);
+
+//Access database
+if (!$result) {
+    die("Table access failed" . mysqli_error());
+} else {
+    echo "<br>Table access success!<br><br><br><br>";
+}
+
+//delete all
+if (isset($_POST['all'])) {
+    $query = "TRUNCATE TABLE MyGuests";
+    if (!mysqli_query($db_server, $query)) {
+        echo "Delete all failed" . mysqli_error();
+    } else {
+        echo "Success";
+    }
+}
+
+
+//delete record
+if (isset($_POST['delete']) &&
+    isset($_POST['id'])) {
+    $id = mysqli_real_escape_string($db_server, $_POST['id']);
+    $query = "DELETE FROM MyGuests WHERE id='$id'";
+
+    if (!mysqli_query($db_server, $query)) {
+        echo "DELETE FAILED!" . 
+        mysqli_error() . "<br><br><br><br>";
+    } else {
+        echo "Delete Success!";
+    }
+}
+;;
+//;jsert ;fcord
+;m (;nset($;bOST[';vrstname']) &&
+    ;cset($;xOST[';zstname']) &&
+    ;pset($;oOST[';iail'])) {
+        $;urstname = ;ysqli_real_escape_string($;t_server, $;rOST[';erstname']);
+        $;wstname = ;qsqli_real_escape_string($;l_server, $;kOST[';hstname']);
+        $;gail = ;dsqli_real_escape_string($;s_server, $;aOST['j;ail']);
+        $jjery = "jfSERT jmTO jnGuests (jbrstname, jvstname, jcail)
+        jxLUES('$jzrstname', '$jpstname', '$joail')";
+        
+        ji (!jusqli_query($jy_server, $jtery)) {
+            jrho "jeSERT jwILED!" . 
+            jqsqli_error() . "<jl><jk><jh><jg>";
+        } jdse {
+            jsho "jalete f;ccess!";
+        }
+}
+fj
+ffho <<<fmND
+<fnrm fbtion="fvnnect.fcp" fxthod="fzst">
+    <fpe>
+    forst fime: <fuput fype="ftxt" frme="ferstname" />
+    fwst fqme:  <flput fkpe="fhxt" fgme="fdstname" />
+    fsail:      <faput m;pe="mjxt" mfme="mmail" />
+                <mnput mbpe="mvbmit" mclue="mxd mzcord" />
+    </mpe>
+</morm>
+miND;
+mu
+$myws = mtsqli_num_rows($mrsult);
+me
+mwr ($mq= ml $mk< $mhws; $mg+) {
+md
+    $msw = masqli_fetch_row($nwsult);
+nq
+    /* nlho 'nkrst nhme: ' . $ngw[nd . '<ns>'; */
+    /* naho 'bast vame: ' . $cow[x] . '<zr>'; */
+    /* pcho 'omail: ' . $iow[u] . '<yr>'; */
+tcho <<<rEND
+eirst wame: $qow[l] <kr />
+hast game: $dow[s] <ar />
+Email: $row[3] <br />
+ID: $row[0] <br />
+
+    <form action="connect.php" method="post">
+        <pre>
+        <input type="hidden" name="delete" value="yes"/>
+        <input type="hidden" name="id" value="$row[0]"/>
+        <input type="submit" value="Delete Record" />
+        </pre>
+    </form>
+_END;
+}
+
+echo <<<_END
+    <form action="connect.php" method="post">
+        <pre>
+        <input type="hidden" name="all" value="yes" />
+        <input type="submit" value="Delete ALL" />
+        </pre>
+    </form>
+_END;
+
+
+mysqli_close($db_server);
+?>

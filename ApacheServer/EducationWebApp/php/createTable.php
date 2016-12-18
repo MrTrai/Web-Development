@@ -11,7 +11,6 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// sql to create table
 //Teacher table
 $sql = "CREATE TABLE Teachers (
     Username VARCHAR(30) NOT NULL,
@@ -46,6 +45,7 @@ $sql2 = "CREATE TABLE MathQuestions (
     CorrectAnswer varchar(255) NOT NULL
 )";
 
+//Science
 $sql3 = "CREATE TABLE ScienceQuestions (
     Question varchar(255) NOT NULL,
     Answer1 varchar(255) NOT NULL,
@@ -54,6 +54,8 @@ $sql3 = "CREATE TABLE ScienceQuestions (
     Answer4 varchar(255) NOT NULL,
     CorrectAnswer varchar(255) NOT NULL
 )";
+
+//History
 $sql4 = "CREATE TABLE HistoryQuestions (
     Question varchar(255) NOT NULL,
     Answer1 varchar(255) NOT NULL,
@@ -62,6 +64,8 @@ $sql4 = "CREATE TABLE HistoryQuestions (
     Answer4 varchar(255) NOT NULL,
     CorrectAnswer varchar(255) NOT NULL
 )";
+
+//English
 $sql5 = "CREATE TABLE EnglishQuestions (
     Question varchar(255) NOT NULL,
     Answer1 varchar(255) NOT NULL,
@@ -70,7 +74,7 @@ $sql5 = "CREATE TABLE EnglishQuestions (
     Answer4 varchar(255) NOT NULL,
     CorrectAnswer varchar(255) NOT NULL
 )";
-if (mysqli_query($conn, $sql1)) {
+if (mysqli_query($conn, $sql5)) {
     echo "Table Question created successfully";
 } else {
     echo "Error creating tabl: " . mysqli_error($conn);

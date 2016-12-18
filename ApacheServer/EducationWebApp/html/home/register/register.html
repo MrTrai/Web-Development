@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-sm-1"> </div>
                 <div class="col-sm-6">
-                    <input class="form-control" name="username" type="text" id="username"/>
+                    <input class="form-control" ng-model="vm.username" name="username" type="text" id="username"/>
                 </div>
                 <div class="col-sm-4"> </div>
             </div>
@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-sm-1"> </div>
                 <div class="col-sm-6">
-                    <input class="form-control" name="password" type="password" id="password"/>
+                    <input class="form-control" ng-model="vm.password" name="password" type="password" id="password"/>
                 </div>
                 <div class="col-sm-4"> </div>
             </div>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-sm-1"> </div>
                 <div class="col-sm-6">
-                    <input class="form-control" name="email" type="text" id="email"/>
+                    <input class="form-control" ng-model="vm.email" name="email" type="text" id="email"/>
                 </div>
                 <div class="col-sm-4"> </div>
             </div>
@@ -41,10 +41,10 @@
                 <div class="col-sm-6">
                     <form id="Title" action="">
                         <label class="radio-inline" style="color:white">
-                            <input type="radio" name="optradio" value="teacher">Teacher
+                            <input type="radio" ng-model="vm.data" name="optradio" value="teacher">Teacher
                         </label>
                         <label class="radio-inline" style="color:white">
-                            <input type="radio" name="optradio" value="student">Student
+                            <input type="radio" ng-model="vm.data" name="optradio" value="student">Student
                         </label>
                     </form>
                 </div>
@@ -52,7 +52,6 @@
             </div>
         </form>
         <hr style="margin-left:-25%"/>
-        <button type="submit" id="button_register" class="btn btn-success btn-lg" style="opacity: 1; margin-top: 7%; margin-left:-20%">Register</button>
+        <button type="submit" id="button_register" class="btn btn-success btn-lg" ng-click="vm.register(vm.username, vm.email, vm.password)" style="opacity: 1; margin-top: 7%; margin-left:-20%">Register</button>
     </div>
-
 </div>

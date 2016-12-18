@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "123";
+$password = "";
 $dbname = "myDB";
 
 // Create connection
@@ -17,11 +17,12 @@ $logPassword = $_REQUEST['password'];
 $logEmail = $_REQUEST['email'];
 
 //fetch table rows from mysql db
-$sql = "INSERT INTO Teachers (Username, Password, Email)
-    VALUES ('$name', '$email')";
+$sql = "INSERT INTO Teachers (Username, Email, Password)
+    VALUES ('$logName', '$logEmail', '$logPassword')";
+
 $result = mysqli_query($conn, $sql) or die("Error in Inserting " . mysqli_error($conn));
 
 //close the db connection
-mysqli_close($connection);
+mysqli_close($conn);
 ?>
 

@@ -1,9 +1,11 @@
 (function () {
     'use strict';
     angular.module('education')
-        .controller('homeController', homeController);
-    
-    function homeController($scope) {
+        .controller('teacherController', teacherController);
+
+    function teacherController() {
         var vm = this;
+
+
     }
 })();

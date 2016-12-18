@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "123";
+$password = "";
 $dbname = "myDB";
 
 // Create connection
@@ -74,7 +74,7 @@ $sql5 = "CREATE TABLE EnglishQuestions (
     Answer4 varchar(255) NOT NULL,
     CorrectAnswer varchar(255) NOT NULL
 )";
-if (mysqli_query($conn, $sql5)) {
+if (mysqli_query($conn, $sql4)) {
     echo "Table Question created successfully";
 } else {
     echo "Error creating tabl: " . mysqli_error($conn);

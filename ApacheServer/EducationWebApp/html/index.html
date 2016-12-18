@@ -5,17 +5,30 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/restangular/1.5.2/restangular.min.js"></script>
+        <script src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/angular-toastr/dist/angular-toastr.css" />
         <link rel="stylesheet" href="../css/style.css"/>
         <script src="../js/StudentLogin.js" type="text/javascript" charset="utf-8"></script>
         <script src="../js/TeacherLogin.js" type="text/javascript" charset="utf-8"></script>
         <script src="../js/route/index.route.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/lodash/underscore.js" type="text/javascript" charset="utf-8"></script>
         <script src="home/home.controller.js" type="text/javascript" charset="utf-8"></script>
         <script src="home/login/login.controller.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../js/restapi/apiService.js" type="text/javascript" charset="utf-8"></script>
         <script src="home/register/register.controller.js" type="text/javascript" charset="utf-8"></script>
+        <script src="dashboard-student/dashboard.student.controller.js" type="text/javascript" charset="utf-8"></script>
+        <script src="dashboard-student/student/student.controller.js" type="text/javascript" charset="utf-8"></script>
+        <script src="dashboard-teacher/teacher/teacher.controller.js" type="text/javascript" charset="utf-8"></script>
+        <script src="dashboard-teacher/dashboard.teacher.controller.js" type="text/javascript" charset="utf-8"></script>
+
+
         <script></script>
     </head>
 
@@ -52,5 +65,6 @@
             </div>
         </nav>
         <ui-view></ui-view>
+        <div style="clear:both"></div>
     </body>
 </html>

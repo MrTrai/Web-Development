@@ -28,7 +28,7 @@
                 });
 
                 $("#Check-Btn").click(function() {
-                    $.post("login.php",
+                    $.post("CheckData.php",
                         {
                             username: document.getElementById('username').value,
                             password: document.getElementById('password').value,
@@ -72,7 +72,6 @@
     password: <input class="form-control" name="password" type="password" id="password" />
     <br/>
     email: <input class="form-control" name="email" type="text" id="email" />
-    </form>
         <br/>
         <button type="submit" id="Check-Btn">Check User Name & Password</button>
         <button type="submit" id="Get-Btn">Get Data</button>

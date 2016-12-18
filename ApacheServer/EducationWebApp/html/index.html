@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../css/style.css"/>
         <script src="../js/StudentLogin.js" type="text/javascript" charset="utf-8"></script>
         <script src="../js/TeacherLogin.js" type="text/javascript" charset="utf-8"></script>
+        <script></script>
     </head>
 
     <body>
@@ -58,8 +59,8 @@
                                     </div>
                                     <div class="col-sm-1"> </div>
                                     <div class="col-sm-6">
-                                        <input class="form-control" name="user" type="text" id="sm" placeholder="User Name"/>
-                                        </div>
+                                        <input class="form-control" id="username" name="user" type="text" id="sm" placeholder="User Name"/>
+                                    </div>
                                         <div class="col-sm-4"> </div>
                                     </div>
                                     <div class="form-group form-group-sm">
@@ -68,7 +69,7 @@
                                         </div>
                                         <div class="col-sm-1"> </div>
                                         <div class="col-sm-6">
-                                            <input class="form-control" name="password" type="password" id="sm" placeholder="Password" />
+                                            <input class="form-control" id="password" name="password" type="password" id="sm" placeholder="Password" />
                                         </div>
                                         <div class="col-sm-4"> </div>
                                     </div>
@@ -79,9 +80,10 @@
                                 <div class="col-sm-2"> </div>
                                 <div class="col-sm-1"> </div>
                                 <div class="col-sm-3">
-                                    <button type="button" class="btn btn-success" form="index" style="opacity: 1; margin-left: 30px; margin-top: 20px" onclick="StudentLogin()">
+                                    <button type="button" id="loginbutton" class="btn btn-success" form="index" style="opacity: 1; margin-left: 30px; margin-top: 20px" >
                                         Student Login 
                                     </button>
+                                    <div id="display"></div>
                                 </div>
                                 <div class="col-sm-3">
                                     <button type="button" class="btn btn-success" form="index"style="opacity: 1; margin-left: 30px; margin-top: 20px" onclick="TeacherLogin()">
@@ -94,10 +96,7 @@
                             <div class="form-group form-group-sm">
                                 <div class="col-sm-12" style="margin-left:auto; text-align:center">
                                     <hr />
-                                    <p style="color:white; margin-left: 35px; margin-bottom: 0"><b>Or</b></p>
-                                    <a href="indexRegister.html">
-                                        <button type="button" class="btn btn-success" style="opacity: 1; margin-left: 40px">Register here!</button>
-                                    </a>
+                                        <button type="button" id="StudentLoginButton" class="btn btn-success" style="opacity: 1; margin-left: 40px">Register here!</button>
                                 </div>
                             </div>
                         </div>

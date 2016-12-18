@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "123";
-$dbname = "myDB";
+require_once 'login.php';
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -29,6 +26,8 @@ if (mysqli_num_rows($result) > 0) {
     {
         $emparray[] = $row;
     }
+
+    echo json_encode($emparray);
 } else {
     echo "False";
 }

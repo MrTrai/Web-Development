@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "123";
-$dbname = "myDB";
+require_once 'login.php';
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -26,6 +23,6 @@ $result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error(
 
 echo "Success";
 //close the db connection
-mysqli_close($connection);
+mysqli_close($conn);
 ?>
 

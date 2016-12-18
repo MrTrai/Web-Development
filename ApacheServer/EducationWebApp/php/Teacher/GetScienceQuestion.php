@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "123";
-$dbname = "myDB";
+require_once 'login.php';
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -15,7 +12,7 @@ if (!$conn) {
 
 //fetch table rows from mysql db
 $sql = "select * from ScienceQuestions";
-$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($connection));
+$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
 
 //create an array
 $emparray = array();
@@ -27,6 +24,6 @@ while($row =mysqli_fetch_assoc($result))
 echo json_encode($emparray);
 
 //close the db connection
-mysqli_close($connection);
+mysqli_close($conn);
 ?>
 

@@ -1,9 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "myDB";
-
+require_once 'login.php';
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -16,8 +12,8 @@ $logName = $_REQUEST['username'];
 $logPassword = $_REQUEST['password'];
 
 //Insert
-$sql = "SELECT Username, Password, Email, MathCorrect, MathTotalAnswered, ScienceCorrect, ScienceTotalAnswered, HistoryCorrect, HistoryTotalAnswered, EnglishCorrect, EnglishTotalAnswered
-    FROM Students
+$sql = "SELECT Username, Password, Email
+    FROM Teachers
     WHERE Username='$logName'
     AND Password='$logPassword'";
 
@@ -29,12 +25,11 @@ if (mysqli_num_rows($result) > 0) {
     {
         $emparray[] = $row;
     }
+
     echo json_encode($emparray);
 } else {
-    echo "false";
+    echo "False";
 }
-
-
 
 
 mysqli_close($conn);

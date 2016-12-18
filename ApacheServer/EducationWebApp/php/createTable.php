@@ -1,8 +1,12 @@
 <?php
+<<<<<<< HEAD
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "myDB";
+=======
+require_once 'login.php';
+>>>>>>> 84b5a85c37d66edd7f29a464c8681d7c0cbf19b3
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);

@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "123";
-$dbname = "myDB";
+require_once 'login.php';
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -21,11 +18,16 @@ $answer3 = $_REQUEST['answer3'];
 $answer4 = $_REQUEST['answer4'];
 $correct = $_REQUEST['correct'];
 
+echo $question;
+echo $oldQuestion;
+echo $answer1;
+echo $answer2;
+echo $answer3;
+echo $answer4;
+echo $correct;
 
 //Insert
-$sql = "UPDATE EnglishQuestions
-    SET Question='$question', Answer1='$answer1', Answer2='$answer2', Answer3='$answer3', Answer4='$answer4', CorrectAnswer='$correct'
-    WHERE Question='$oldQuestion'";
+$sql = "UPDATE EnglishQuestions SET Question='$question', Answer1='$answer1', Answer2='$answer2', Answer3='$answer3', Answer4='$answer4', CorrectAnswer='$correct' WHERE Question='$oldQuestion'";
 
 //check error
 $result = mysqli_query($conn, $sql);
@@ -34,9 +36,6 @@ if ($result) {
 } else {
     echo "Error";
 }
-echo $logName;
-echo $logPassword;
-echo $logEmail;
 
 mysqli_close($conn);
 ?>

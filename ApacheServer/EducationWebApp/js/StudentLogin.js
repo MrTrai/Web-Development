@@ -1,3 +1,4 @@
+/*
 $(document).ready(function() {
     $("#Get-Btn").click(function() {
         $.post("getJSON.php",
@@ -33,3 +34,4 @@ $(document).ready(function() {
     $("#studentname").html(storeJson[0].Username);
 });
 
+*/

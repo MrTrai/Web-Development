@@ -50,58 +50,58 @@ if (isset($_POST['delete']) &&
         echo "Delete Success!";
     }
 }
-;;
-//;jsert ;fcord
-;m (;nset($;bOST[';vrstname']) &&
-    ;cset($;xOST[';zstname']) &&
-    ;pset($;oOST[';iail'])) {
-        $;urstname = ;ysqli_real_escape_string($;t_server, $;rOST[';erstname']);
-        $;wstname = ;qsqli_real_escape_string($;l_server, $;kOST[';hstname']);
-        $;gail = ;dsqli_real_escape_string($;s_server, $;aOST['j;ail']);
-        $jjery = "jfSERT jmTO jnGuests (jbrstname, jvstname, jcail)
-        jxLUES('$jzrstname', '$jpstname', '$joail')";
+
+//insert record
+if (isset($_POST['firstname']) &&
+    isset($_POST['lastname']) &&
+    isset($_POST['email'])) {
+        $firstname = mysqli_real_escape_string($db_server, $_POST['firstname']);
+        $lastname = mysqli_real_escape_string($db_server, $_POST['lastname']);
+        $email = mysqli_real_escape_string($db_server, $_POST['email']);
+        $query = "INSERT INTO MyGuests (firstname, lastname, email)
+        VALUES('$firstname', '$lastname', '$email')";
         
-        ji (!jusqli_query($jy_server, $jtery)) {
-            jrho "jeSERT jwILED!" . 
-            jqsqli_error() . "<jl><jk><jh><jg>";
-        } jdse {
-            jsho "jalete f;ccess!";
+        if (!mysqli_query($db_server, $query)) {
+            echo "INSERT FAILED!" . 
+            mysqli_error() . "<br><br><br><br>";
+        } else {
+            echo "Delete Success!";
         }
 }
-fj
-ffho <<<fmND
-<fnrm fbtion="fvnnect.fcp" fxthod="fzst">
-    <fpe>
-    forst fime: <fuput fype="ftxt" frme="ferstname" />
-    fwst fqme:  <flput fkpe="fhxt" fgme="fdstname" />
-    fsail:      <faput m;pe="mjxt" mfme="mmail" />
-                <mnput mbpe="mvbmit" mclue="mxd mzcord" />
-    </mpe>
-</morm>
-miND;
-mu
-$myws = mtsqli_num_rows($mrsult);
-me
-mwr ($mq= ml $mk< $mhws; $mg+) {
-md
-    $msw = masqli_fetch_row($nwsult);
-nq
-    /* nlho 'nkrst nhme: ' . $ngw[nd . '<ns>'; */
-    /* naho 'bast vame: ' . $cow[x] . '<zr>'; */
-    /* pcho 'omail: ' . $iow[u] . '<yr>'; */
-tcho <<<rEND
-eirst wame: $qow[l] <kr />
-hast game: $dow[s] <ar />
-Email: $row[3] <br />
-ID: $row[0] <br />
 
-    <form action="connect.php" method="post">
+echo <<<_END
+<form action="connect.php" method="post">
+    <pre>
+    First Name: <input type="text" name="firstname" />
+    Last Name:  <input type="text" name="lastname" />
+    Email:      <input type="text" name="email" />
+                <input type="submit" value="Add Record" />
+    </pre>
+</form>
+_END;
+
+$rows = mysqli_num_rows($result);
+
+for ($j = 0; $j < $rows; $j++) {
+
+    $row = mysqli_fetch_row($result);
+
+    /* echo 'First name: ' . $row[1] . '<br>'; */
+    /* echo 'Last name: ' . $row[2] . '<br>'; */
+    /* echo 'Email: ' . $row[3] . '<br>'; */
+echo <<<_END
+        First name: $row[1] <br />
+        Last name: $row[2] <br />
+        Email: $row[3] <br />
+        ID: $row[0] <br />
+
+        <form action="connect.php" method="post">
         <pre>
         <input type="hidden" name="delete" value="yes"/>
         <input type="hidden" name="id" value="$row[0]"/>
         <input type="submit" value="Delete Record" />
         </pre>
-    </form>
+        </form>
 _END;
 }
 

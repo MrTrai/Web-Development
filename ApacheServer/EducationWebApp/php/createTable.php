@@ -35,7 +35,7 @@ $sql1 = "CREATE TABLE Students (
     reg_date TIMESTAMP
 )";
 
-//Questions
+//Math Questions
 $sql2 = "CREATE TABLE MathQuestions (
     Question varchar(255) NOT NULL,
     Answer1 varchar(255) NOT NULL,

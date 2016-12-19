@@ -16,6 +16,11 @@ $answer3 = "Barack Obama";
 $answer4 = "Me";
 $correct = "Rowling";
 
+//fetch table rows from mysql db
+$sql = "INSERT INTO EnglishQuestions (Question, Answer1, Answer2, Answer3, Answer4, CorrectAnswer)
+    VALUES ('$question', '$answer1', '$answer2', '$answer3', '$answer4', '$correct')";
+$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
+
 $question = "Who wrote MacBeth?";
 $answer1 = "Rowling";
 $answer2 = "William Shakespear";
@@ -35,6 +40,10 @@ $answer2 = "Fire";
 $answer3 = "Rock";
 $answer4 = "Tree";
 $correct = "Water";
+//fetch table rows from mysql db
+$sql = "INSERT INTO ScienceQuestions (Question, Answer1, Answer2, Answer3, Answer4, CorrectAnswer)
+    VALUES ('$question', '$answer1', '$answer2', '$answer3', '$answer4', '$correct')";
+$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
 
 
 $question = "What causes fire?";
@@ -56,6 +65,13 @@ $answer3 = "30";
 $answer4 = "1";
 $correct = "20";
 
+
+//fetch table rows from mysql db
+$sql = "INSERT INTO MathQuestions (Question, Answer1, Answer2, Answer3, Answer4, CorrectAnswer)
+    VALUES ('$question', '$answer1', '$answer2', '$answer3', '$answer4', '$correct')";
+$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
+
+
 $question = "What is 3 - 10?";
 $answer1 = "-7";
 $answer2 = "10";
@@ -75,6 +91,12 @@ $answer2 = "Chief";
 $answer3 = "Guard";
 $answer4 = "President of US";
 $correct = "President of US";
+
+//fetch table rows from mysql db
+$sql = "INSERT INTO HistoryQuestions (Question, Answer1, Answer2, Answer3, Answer4, CorrectAnswer)
+    VALUES ('$question', '$answer1', '$answer2', '$answer3', '$answer4', '$correct')";
+$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
+
 
 $question = "Who is Barack Obama?";
 $answer1 = "Farmer";

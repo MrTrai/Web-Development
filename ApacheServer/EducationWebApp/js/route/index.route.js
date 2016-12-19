@@ -146,6 +146,13 @@
                 controllerAs: 'vm'
             })
 
+            .state('dashboardTeacher.chart', {
+                url: '/Chart',
+                templateUrl: "dashboard-teacher/chart/chart.html",
+                controller: 'chartController',
+                controllerAs: 'vm'
+            })
+
 
 
            /* .state('education.home.register', {

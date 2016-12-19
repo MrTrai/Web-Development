@@ -9,8 +9,8 @@ if (!$conn) {
 $logName = $_REQUEST['username'];
 $logPassword = $_REQUEST['password'];
 //Insert
-$sql = "SELECT Username, Password, Email
-    FROM Teachers
+$sql = "SELECT Username, Password, Email, MathCorrect, MathTotalAnswered, ScienceCorrect, ScienceTotalAnswered, HistoryCorrect, HistoryTotalAnswered, EnglishCorrect, EnglishTotalAnswered
+    FROM Students
     WHERE Username='$logName'
     AND Password='$logPassword'";
 //check error
@@ -23,7 +23,7 @@ if (mysqli_num_rows($result) > 0) {
     }
     echo json_encode($emparray);
 } else {
-    echo "123123";
+    echo "False";
 }
 mysqli_close($conn);
 ?>

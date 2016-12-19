@@ -1,6 +1,6 @@
 <div class="container-fluid text-center">
     <div class="row content">
-        <div class="col-sm-2 sidenav">
+        <div class="col-sm-2 sidenav teacher">
 
             <img src="../img/profile_pic.jpg" class="img-rounded img-responsive" alt="Cinque Terre" width="250px" height="150px" style="margin:auto"/>
             <br />
@@ -14,20 +14,20 @@
             <p style="color:grey">Email: ttran96@gatech.edu</p>
             <p style="color:grey">Grade: 4</p>
             <hr />
-            <a href="#demo" class="btn btn-info btn-block" data-toggle="collapse"
+            <a data-target="#demo" class="btn btn-info btn-block" data-toggle="collapse"
                style="margin-bottom:15px; white-space:normal">
                 <span class="glyphicon glyphicon-book"></span> Manage Quiz <span class="caret"></span>
             </a>
             <div id="demo" class="collapse">
                 <div class="btn-group-vertical btn-block">
-                    <button type="button" class="btn btn-primary">Science Quiz</button>
-                    <button type="button" class="btn btn-primary">Math Quiz</button>
-                    <button type="button" class="btn btn-primary">History Quiz</button>
-                    <button type="button" class="btn btn-primary">English Quiz</button>
+                    <button ui-sref="dashboardTeacher.science" type="button" class="btn btn-primary">Science Quiz</button>
+                    <button ui-sref="dashboardTeacher.math" type="button" class="btn btn-primary">Math Quiz</button>
+                    <button ui-sref="dashboardTeacher.history" type="button" class="btn btn-primary">History Quiz</button>
+                    <button ui-sref="dashboardTeacher.english" type="button" class="btn btn-primary">English Quiz</button>
                 </div>
             </div>
             <br />
-            <a href="#demo1" class="btn btn-info btn-block" data-toggle="collapse"
+            <a data-target="#demo1" class="btn btn-info btn-block" data-toggle="collapse"
                style="margin-bottom:15px; white-space:normal">
                 <span class="glyphicon glyphicon-user"></span> Manage Students <span class="caret"></span>
             </a>
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <br />
-            <a href="#demo2" class="btn btn-info btn-block" data-toggle="collapse"
+            <a data-target="#demo2" class="btn btn-info btn-block" data-toggle="collapse"
                style="margin-bottom:15px; white-space:normal">
                 <span class="glyphicon glyphicon-align-left"></span> View Data <span class="caret"></span>
             </a>
@@ -51,22 +51,22 @@
             </div>
             <br />
 
-            <a href="#demo3" class="btn btn-info btn-block" data-toggle="collapse"
+            <a data-target="#demo3" class="btn btn-info btn-block" data-toggle="collapse"
                style="margin-bottom:15px; white-space:normal">
                 <span class="glyphicon glyphicon-file"></span>Sample Quiz <span class="caret"></span>
             </a>
             <div id="demo3" class="collapse" style="margin-bottom:20px">
                 <div class="btn-group-vertical btn-block">
-                    <button type="button" class="btn btn-primary btn-block">
+                    <button ui-sref="dashboardTeacher.sscience" type="button" class="btn btn-primary btn-block">
                         <span class="glyphicon glyphicon-cloud"></span> Science
                     </button>
-                    <button type="button" class="btn btn-primary btn-block">
+                    <button ui-sref="dashboardTeacher.smath" type="button" class="btn btn-primary btn-block">
                         <span class="glyphicon glyphicon-cog"></span> Math
                     </button>
-                    <button type="button" class="btn btn-primary btn-block">
+                    <button ui-sref="dashboardTeacher.shistory" type="button" class="btn btn-primary btn-block">
                         <span class="glyphicon glyphicon-hourglass"></span> History
                     </button>
-                    <button type="button" class="btn btn-primary btn-block">
+                    <button ui-sref="dashboardTeacher.senglish" type="button" class="btn btn-primary btn-block">
                         <span class="glyphicon glyphicon-pencil"></span> English
                     </button>
                 </div>
@@ -74,7 +74,7 @@
 
             <br />
 
-            <a href="./index.html">
+            <a ui-sref="home.login">
                 <button type="button" class="btn btn-info btn-block">
                     <span class="glyphicon glyphicon-log-out"></span> Logout
                 </button>

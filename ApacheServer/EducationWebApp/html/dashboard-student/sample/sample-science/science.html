@@ -1,0 +1,26 @@
+<div class="col-lg-9 text-left">
+    <h1>Science Questions</h1>
+    <div style="clear:both"></div>
+    <hr/>
+    <div ng-repeat="num in vm.data">
+        <div class="panel panel-default" style="padding-left:20px; padding-top:10px; background-color:black; opacity:0.80; color:white; border-radius:10px;">
+            <span>Questions: {{num.Question}}</span>
+            <div class="radio" class="pad-left">
+                <label><input type="radio" name="optradio">{{num.Answer1}}</label>
+            </div>
+            <div class="radio" class="pad-left">
+                <label><input type="radio" name="optradio">{{num.Answer2}}</label>
+            </div>
+            <div class="radio" class="pad-left">
+                <label><input type="radio" name="optradio" ng-bind="">{{num.Answer3}}</label>
+            </div>
+            <div class="radio" class="pad-left">
+                <label><input type="radio" name="optradio">{{num.Answer4}}</label>
+            </div>
+            <button class="btn btn-info pull-left" ng-click="vm.delete(num.Question)">Submit</button>
+            <div style="clear:both; padding-bottom:10px;"></div>
+        </div>
+
+    </div>
+
+</div>

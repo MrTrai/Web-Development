@@ -12,17 +12,20 @@
                 password: password
             };
 
-            return restService.login(criteria, function (result) {
+            return restService.log(criteria, function (result) {
                 console.log(result);
-                if(result != "false" && !_.isEmpty(result[0])) {
+                if(result != "False" && !_.isEmpty(result)) {
+                    console.log(result);
                     $rootScope.account = JSON.parse(result);
                     console.log($rootScope.account);
-                    $state.go('dashboardTeacher.teacher')
+                    $state.go('dashboardTeacher.teacher');
                 } else {
                     console.log("failed");
                 }
             });
         };
+
+
 
         vm.studentLogin = function (username, password) {
             var criteria = {
@@ -32,7 +35,7 @@
 
             return restService.login(criteria, function (result) {
                 console.log(result);
-                if(result != "false" && !_.isEmpty(result)) {
+                if(result != "False" && !_.isEmpty(result)) {
                     console.log(result);
                     $rootScope.account = JSON.parse(result);
                     console.log($rootScope.account);

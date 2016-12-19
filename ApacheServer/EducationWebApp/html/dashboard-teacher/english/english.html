@@ -1,0 +1,42 @@
+<div class="col-lg-9 text-left">
+    <h1>English Questions</h1>
+    <div class="pull-left"><button class="btn btn-success" ng-click="vm.add()" data-target="#get" data-toggle="collapse">+ Add Question</button></div>
+    <div style="clear:both"></div>
+    <div class="collapse" id="get">
+        <div class="form-group" style="padding-top:15px;" id="addQuestion">
+            <input class="form-control" ng-model="vm.question" type="text" placeholder="Question"/>
+            <input class="form-control" ng-model="vm.answer1" type="text" placeholder="Answer 1"/>
+            <input class="form-control" ng-model="vm.answer2"type="text" placeholder="Answer 2"/>
+            <input class="form-control" ng-model="vm.answer3" type="text" placeholder="Answer 3"/>
+            <input class="form-control" ng-model="vm.answer4" type="text" placeholder="Answer 4"/>
+            <label for="correct">Correct Answer:</label>
+            <input type="text" class="form-control" ng-model="vm.correct" placeholder="Correct Answer"/>
+        </div>
+        <button class="btn btn-success pull-left" ng-click="vm.add()">Submit</button>
+    </div>
+
+    <div style="clear:both"></div>
+
+    <hr/>
+    <div ng-repeat="num in vm.data">
+        <div class="panel panel-default" style="padding-left:20px; padding-top:10px; background-color:black; opacity:0.80; color:white; border-radius:10px;">
+            <span>Questions: {{num.Question}}</span>
+            <div class="radio" class="pad-left">
+                <label><input type="radio" name="optradio">{{num.Answer1}}</label>
+            </div>
+            <div class="radio" class="pad-left">
+                <label><input type="radio" name="optradio">{{num.Answer2}}</label>
+            </div>
+            <div class="radio" class="pad-left">
+                <label><input type="radio" name="optradio" ng-bind="">{{num.Answer3}}</label>
+            </div>
+            <div class="radio" class="pad-left">
+                <label><input type="radio" name="optradio">{{num.Answer4}}</label>
+            </div>
+            <button class="btn btn-danger pull-left" ng-click="vm.delete(num.Question)">Delete</button>
+            <div style="clear:both; padding-bottom:10px;"></div>
+        </div>
+
+    </div>
+
+</div>

@@ -11,9 +11,10 @@ if (!$conn) {
 
 $questionName = $_REQUEST['questionName'];
 
+echo $questionName;
 //Insert
 $sql = "DELETE FROM HistoryQuestions
-    WHERE questionName='$questionName'";
+    WHERE Question='$questionName'";
 
 //check error
 $result = mysqli_query($conn, $sql);

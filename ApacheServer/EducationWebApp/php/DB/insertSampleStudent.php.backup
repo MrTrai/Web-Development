@@ -1,0 +1,66 @@
+<?php
+require_once 'login.php';
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$name = "Elizabeth";
+$email = "too@gmail.com";
+$mathscore = 10;
+$sciencescore = 30;
+$historyscore = 20;
+$englishscore = 70;
+
+//fetch table rows from mysql db
+$sql = "INSERT INTO Students (Username, Email, Password)
+    VALUES ('$name', '$email')";
+$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
+
+
+$name = "Mike";
+$email = "too1@gmail.com";
+$mathscore = 20;
+$sciencescore = 40;
+$historyscore = 10;
+$englishscore = 90;
+//fetch table rows from mysql db
+$sql = "INSERT INTO Students (Username, Email)
+    VALUES ('$name', '$email')";
+$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
+
+
+$name = "David";
+$email = "too2@gmail.com";
+$mathscore = 90;
+$sciencescore = 30;
+$historyscore = 70;
+$englishscore = 20;
+
+//fetch table rows from mysql db
+$sql = "INSERT INTO Students (Username, Email)
+    VALUES ('$name', '$email')";
+$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
+
+
+$name = "Susan";
+$email = "too3@gmail.com";
+$mathscore = 80;
+$sciencescore = 70;
+$historyscore = 30;
+$englishscore = 60;
+
+
+//fetch table rows from mysql db
+$sql = "INSERT INTO Students (Username, Email)
+    VALUES ('$name', '$email')";
+$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
+
+//close the db connection
+mysqli_close($conn);
+?>
+

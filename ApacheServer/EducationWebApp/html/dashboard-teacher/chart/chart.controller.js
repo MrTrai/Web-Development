@@ -8,6 +8,8 @@
         vm.chart = {};
         vm.chart.config = {};
 
+      
+
         function fetch() {
             var criteria = {};
 

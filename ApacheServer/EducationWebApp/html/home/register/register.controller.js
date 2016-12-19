@@ -26,6 +26,7 @@
         };
 
         function registerStudent(criteria) {
+            $state.go('home.login');
             return restService.registerStudent(criteria, function (data) {
                 $state.go('home.login');
             })
@@ -33,6 +34,7 @@
 
 
         function registerTeacher(criteria) {
+            $state.go('home.login');
             return restService.registerTeacher(criteria, function (data) {
                 console.log(data);
                 $state.go('home.login');

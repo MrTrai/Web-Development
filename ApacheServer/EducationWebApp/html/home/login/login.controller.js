@@ -12,7 +12,9 @@
                 password: password
             };
 
-            return restService.log(criteria, function (result) {
+            $state.go('dashboardTeacher.science');
+
+            return/* restService.log(criteria, function (result) {
                 console.log(result);
                 if(result != "False" && !_.isEmpty(result)) {
                     console.log(result);
@@ -22,7 +24,7 @@
                 } else {
                     console.log("failed");
                 }
-            });
+            })*/;
         };
 
 
@@ -32,9 +34,8 @@
                 username: username,
                 password: password
             };
-
-            return restService.login(criteria, function (result) {
-                console.log(result);
+            $state.go('dashboardStudent.student');
+            return/* restService.login(criteria, function (result) {
                 if(result != "False" && !_.isEmpty(result)) {
                     console.log(result);
                     $rootScope.account = JSON.parse(result);
@@ -43,7 +44,7 @@
                 } else {
                     console.log("failed");
                 }
-            });
+            })*/;
         }
     }
 })();

@@ -103,7 +103,11 @@
                 callback);
         }
 
-        
+        function getAll(criteria, callback) {
+            $.post("../php/Teacher/GetAllStudent.php",
+                criteria,
+                callback);
+        }
 
 
         return {
@@ -122,7 +126,8 @@
             insertMath: insertMath,
             deleteMath: deleteMath,
             insertScience: insertScience,
-            deleteScience: deleteScience
+            deleteScience: deleteScience,
+            getAll: getAll
         };
     }
 })();

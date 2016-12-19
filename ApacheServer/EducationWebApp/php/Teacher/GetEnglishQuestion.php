@@ -15,7 +15,7 @@ if (!$conn) {
 
 //fetch table rows from mysql db
 $sql = "select * from EnglishQuestions";
-$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($connection));
+$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
 
 //create an array
 $emparray = array();
@@ -27,5 +27,5 @@ while($row =mysqli_fetch_assoc($result))
 echo json_encode($emparray);
 
 //close the db connection
-mysqli_close($connection);
+mysqli_close($con);
 ?>

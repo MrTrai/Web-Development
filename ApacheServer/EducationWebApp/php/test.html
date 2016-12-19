@@ -95,6 +95,22 @@
                         document.getElementById("display").innerHTML=data;
                     });
                 });
+
+                $("#updateEnglish").click(function() {
+                    $.post("./Teacher/UpdateEnglishQuestion.php",
+                        {
+                            oldQuestion : document.getElementById('oldQuestion').value,
+                            question : document.getElementById('question').value,
+                            answer1 : document.getElementById('answer1').value,
+                            answer2 : document.getElementById('answer2').value,
+                            answer3 : document.getElementById('answer3').value,
+                            answer4 : document.getElementById('answer4').value,
+                            correct : document.getElementById('correct').value
+                        },
+                    function(data,status){
+                        document.getElementById("display").innerHTML=data;
+                    });
+                });
             });
         </script>
     </head>
@@ -109,31 +125,47 @@
     <hr />
     <p>Insert Question</p>
 
-    question: <input class="form-control" name="username" type="text" id="question" />
-    <br/>
-    answer1: <input class="form-control" name="password" type="text" id="answer1" />
-    <br/>
-    answer2: <input class="form-control" name="email" type="text" id="answer2" />
-    <br/>
-    answer3: <input class="form-control" name="email" type="text" id="answer3" />
-    <br/>
-    answer4: <input class="form-control" name="email" type="text" id="answer4" />
-    <br/>
-    correct: <input class="form-control" name="email" type="text" id="correct" />
-    <hr />
+    <!-- question: <input class="form-control" name="username" type="text" id="question" /> -->
+    <!-- <br/> -->
+    <!-- answer1: <input class="form-control" name="password" type="text" id="answer1" /> -->
+    <!-- <br/> -->
+    <!-- answer2: <input class="form-control" name="email" type="text" id="answer2" /> -->
+    <!-- <br/> -->
+    <!-- answer3: <input class="form-control" name="email" type="text" id="answer3" /> -->
+    <!-- <br/> -->
+    <!-- answer4: <input class="form-control" name="email" type="text" id="answer4" /> -->
+    <!-- <br/> -->
+    <!-- correct: <input class="form-control" name="email" type="text" id="correct" /> -->
+    <!-- <hr /> -->
     <p>Get All Student</p>
     <hr />
     <p>Update English Question</p>
-    input
+    oldQuestion:   <input type="text" name="oldQuestion" value="" id="oldQuestion">
+    <br />
+    question:   <input type="text" name="question" value="" id="question">
+    <br />
+    answer1:   <input type="text" name="answer1" value="" id="answer1">
+    <br />
+    answer2:   <input type="text" name="answer2" value="" id="answer2">
+    <br />
+    answer3:   <input type="text" name="answer3" value="" id="answer3">
+    <br />
+    answer4:   <input type="text" name="answer4" value="" id="answer4">
+    <br />
+    correct:   <input type="text" name="correct" value="" id="correct">
+    <br />
+    <hr />
+        <p>Teacher Registration</p>
+    Username:   <input type="text" name="answer3" value="" id="answer3">
+    <br />
+    password:   <input type="text" name="answer4" value="" id="answer4">
+    <br />
+    email:   <input type="text" name="correct" value="" id="correct">
 
-$oldQuestion = $_REQUEST['oldQuestion'];
-$question = $_REQUEST['question'];
-$answer1 = $_REQUEST['answer1'];
-$answer2 = $_REQUEST['answer2'];
-$answer3 = $_REQUEST['answer3'];
-$answer4 = $_REQUEST['answer4'];
-$correct = $_REQUEST['correct'];
+    <div id="display"></div>
 
+
+    <button type="submit" id="updateEnglish">Update English</button>
     <button type="submit" id="getStudent">Get Student from GetAllStudent.php</button>
     <button type="submit" id="getQuestion">Get Question from GetEnglishQuestion.php</button>
     <button id="scienceInsert" type="submit">Insert Question</button>
@@ -144,8 +176,6 @@ $correct = $_REQUEST['correct'];
     <!-- <button type="submit" id="Submit-Btn">Submit</button> -->
     <button type="submit" id="Submit-Btn" style="opacity: 1; margin-top: 7%">Submit!</button>
     <button type="submit" id="Delete-Btn">Delete Data</button>
-    <div id="display"></div>
-
 </body>
 </html>
 

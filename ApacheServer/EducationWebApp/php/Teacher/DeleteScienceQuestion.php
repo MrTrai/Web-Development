@@ -12,13 +12,11 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$logName = $_REQUEST['username'];
-$logEmail = $_REQUEST['email'];
+$questionName = $_REQUEST['questionName'];
 
 //Insert
-$sql = "DELETE FROM Students
-    WHERE Username='$logName'
-    AND Email='$logEmail'";
+$sql = "DELETE FROM ScienceQuestions
+    WHERE questionName='$questionName'";
 
 //check error
 $result = mysqli_query($conn, $sql);
@@ -27,9 +25,6 @@ if ($result) {
 } else {
     echo "Error";
 }
-echo $logName;
-echo $logPassword;
-echo $logEmail;
 
 mysqli_close($conn);
 ?>

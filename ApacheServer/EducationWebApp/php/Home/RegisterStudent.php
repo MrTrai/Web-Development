@@ -23,5 +23,7 @@ $sql = "INSERT INTO Students (Username, Email, Password)
 //check error
 $result = mysqli_query($conn, $sql) or die("Error in Inserting " . mysqli_error($conn));
 
+echo "success";
+
 mysqli_close($conn);
 ?>

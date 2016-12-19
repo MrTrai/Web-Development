@@ -12,15 +12,19 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$name = $_REQUEST['username'];
-$email = $_REQUEST['email'];
+$questionName = $_REQUEST['questionName'];
 
-//fetch table rows from mysql db
-$sql = "INSERT INTO Students (Username, Email)
-    VALUES ('$name', '$email')";
-$result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
+//Insert
+$sql = "DELETE FROM EnglishQuestions
+    WHERE questionName='$questionName'";
 
-//close the db connection
+//check error
+$result = mysqli_query($conn, $sql);
+if ($result) {
+    echo "Succeed";
+} else {
+    echo "Error";
+}
+
 mysqli_close($conn);
 ?>
-

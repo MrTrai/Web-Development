@@ -29,12 +29,12 @@ if (mysqli_num_rows($result) > 0) {
     {
         $emparray[] = $row;
     }
+
+    echo json_encode($emparray);
 } else {
     echo "False";
 }
 
-
-echo json_encode($emparray);
 
 mysqli_close($conn);
 ?>

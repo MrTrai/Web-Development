@@ -1,3 +1,4 @@
+
 <?php
 $servername = "localhost";
 $username = "root";
@@ -12,19 +13,18 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$logName = $_REQUEST['username'];
-$logPassword = $_REQUEST['password'];
-$logEmail = $_REQUEST['email'];
+$questionName = $_REQUEST['questionName'];
 
 //Insert
-$sql = "INSERT INTO Students (Username, Email, Password)
-    VALUES ('$logName', '$logEmail', '$logPassword')";
+$sql = "DELETE FROM MathQuestions
+    WHERE questionName='$questionName'";
 
 //check error
-if ( mysqli_query($conn, $sql)) {
-    echo "Succeed!";
+$result = mysqli_query($conn, $sql);
+if ($result) {
+    echo "Succeed";
 } else {
-    echo "Error!";
+    echo "Error";
 }
 
 mysqli_close($conn);

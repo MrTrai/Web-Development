@@ -12,12 +12,12 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$question = $_POST['question'];
-$answer1 = $_POST['answer1'];
-$answer2 = $_POST['answer2'];
-$answer3 = $_POST['answer3'];
-$answer4 = $_POST['answer4'];
-$correct = $_POST['correct'];
+$question = $_REQUEST['question'];
+$answer1 = $_REQUEST['answer1'];
+$answer2 = $_REQUEST['answer2'];
+$answer3 = $_REQUEST['answer3'];
+$answer4 = $_REQUEST['answer4'];
+$correct = $_REQUEST['correct'];
 
 //fetch table rows from mysql db
 $sql = "INSERT INTO HistoryQuestions (Question, Answer1, Answer2, Answer3, Answer4, CorrectAnswer)
@@ -25,6 +25,6 @@ $sql = "INSERT INTO HistoryQuestions (Question, Answer1, Answer2, Answer3, Answe
 $result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($conn));
 
 //close the db connection
-mysqli_close($connection);
+mysqli_close($conn);
 ?>
 

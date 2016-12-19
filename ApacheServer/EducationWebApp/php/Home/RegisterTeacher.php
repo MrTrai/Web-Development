@@ -18,10 +18,10 @@ $logEmail = $_REQUEST['email'];
 
 //fetch table rows from mysql db
 $sql = "INSERT INTO Teachers (Username, Password, Email)
-    VALUES ('$name', '$email')";
+    VALUES ('$logName', '$logPassword', '$logEmail')";
 $result = mysqli_query($conn, $sql) or die("Error in Inserting " . mysqli_error($conn));
 
 //close the db connection
-mysqli_close($connection);
+mysqli_close($conn);
 ?>
 

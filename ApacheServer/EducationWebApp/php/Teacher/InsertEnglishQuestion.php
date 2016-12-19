@@ -26,6 +26,6 @@ $result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error(
 
 echo "Success";
 //close the db connection
-mysqli_close($connection);
+mysqli_close($conn);
 ?>
 

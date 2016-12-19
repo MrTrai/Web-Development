@@ -13,7 +13,7 @@ $questionName = $_REQUEST['questionName'];
 
 //Insert
 $sql = "DELETE FROM ScienceQuestions
-    WHERE questionName='$questionName'";
+    WHERE Question='$questionName'";
 
 //check error
 $result = mysqli_query($conn, $sql);

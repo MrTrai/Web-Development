@@ -14,7 +14,7 @@ $questionName = $_REQUEST['questionName'];
 
 //Insert
 $sql = "DELETE FROM MathQuestions
-    WHERE questionName='$questionName'";
+    WHERE Question='$questionName'";
 
 //check error
 $result = mysqli_query($conn, $sql);
